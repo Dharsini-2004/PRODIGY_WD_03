@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    color: #37B7C3; /* Light teal text color */
+}
+
+main {
+    background:#071952;/* Light blue background */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    width: 235px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#header .player {
+    background: #088395; /* Teal */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    border: solid 4px #088395;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+#header .player:hover {
+    border: solid 4px #37B7C3; /* Light teal */
+}
+#header .player-active {
+    opacity: 1;
+    border: solid 4px #37B7C3; /* Light teal */
+}
+#header #xPlayerDisplay {
+    color: #FFFFFF; /* White */
+}
+#header #oPlayerDisplay {
+    color: #EBF4F6; /* Light blue */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 12px;
+}
+#board .cell {
+    background:  #EBF4F6;  /* Dark blue */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background;
+}
+#board .cell:hover {
+    background: #088395; /* Teal */
+}
+
+#restartBtn {
+    margin-top: 30px;
+    width: 235px;
+    background: #37B7C3; /* Light teal */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s background;
+    color: #EBF4F6; /* Light blue text */
+}
+#restartBtn:hover {
+    background: #071952; /* Dark blue */
+    color: #37B7C3; /* Light teal text on hover */
+}
